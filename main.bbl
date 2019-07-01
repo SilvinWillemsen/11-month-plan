@@ -1,0 +1,177 @@
+\begin{thebibliography}{10}
+
+\bibitem{Sensel2019}
+Sensel Inc.,
+\newblock ``{Sensel Morph},''
+\newblock Available at \href{https://sensel.com/}{https://sensel.com/},
+  Accessed April 01, 2019.
+
+\bibitem{Haply2019}
+Haply Robotics,
+\newblock ``{Haply Robotics},''
+\newblock Available at
+  \href{https://haply.co/robotics.html}{https://haply.co/robotics.html},
+  Accessed April 01, 2019.
+
+\bibitem{Smith2010a}
+J.~O. Smith,
+\newblock ``Virtual acoustic musical instruments: Review and update,''
+\newblock {\em Center for computer research in music and acoustics (CCRMA)},
+  2010.
+
+\bibitem{Valimaki2006}
+V.~V\"{a}lim\"{a}ki, J.~Pakarinen, C.~Erkut, and M.~Karjalainen,
+\newblock ``Discrete-time modelling of musical instruments,''
+\newblock {\em Institute of Physics Publishing}, 2006.
+
+\bibitem{Smith2010b}
+J.~O. Smith,
+\newblock {\em Physical audio signal processing: For virtual musical
+  instruments and digital audio effects},
+\newblock W3K Publishing, 2010.
+
+\bibitem{Bilbao2009}
+S.~Bilbao,
+\newblock {\em Numerical sound synthesis: Finite difference schemes and
+  simulation in musical acoustics},
+\newblock John Wiley \& Sons, 2009.
+
+\bibitem{Fletcher1998}
+N.H. Fletcher and T.D. Rossing,
+\newblock {\em The physics of musical instruments},
+\newblock Springer, second edition, 1998.
+
+\bibitem{Bilbao2018}
+S.~Bilbao, B.~Hamilton, R.~Harrison, and A.~Torin,
+\newblock ``Chapter 19: Finite-difference schemes in musical acoustics: A
+  tutorial,''
+\newblock in {\em Springer Handbook of Systematic Musicology}, pp. 349--384.
+  Springer, 2018.
+
+\bibitem{Erkut2002}
+C.~Erkut and M.~Karjalainen,
+\newblock ``Finite difference method vs. digital waveguide method in string
+  instrument modeling and synthesis,''
+\newblock {\em Proc. Int. Symp. on Musical Acoustics}, 2002.
+
+\bibitem{Maestre2014}
+E.~Maestre, C.~Spa, and J.O. Smith,
+\newblock ``A bowed string physical model including finite-width thermal
+  friction and hair dynamics,''
+\newblock {\em Proceedings ICMC|SMC|2014}, pp. 1305--1311, 2014.
+
+\bibitem{Mehes2016}
+S.~Mehes, M.~van Walstijn, and P.~Stapleton,
+\newblock ``Towards a virtual-acoustic string instrument,''
+\newblock {\em Proceedings of the 13th Sound and Music Computing Conference
+  (SMC)}, 2016.
+
+\bibitem{Pfeifle2012}
+F.~Pfeifle and R.~Bader,
+\newblock ``{Real-time finite difference physical models of musical instruments
+  on a field programmable gate array (FPGA)},''
+\newblock {\em Proceedings of the 15th International Conference on Digital
+  Audio Effects (DAFx)}, 2012.
+
+\bibitem{Pfeifle2015}
+F.~Pfeifle and R.~Bader,
+\newblock ``Real-time finite-difference method physical modeling of musical
+  instruments using field-programmable gate array hardware,''
+\newblock {\em Journal of the Audio Engineering Society}, vol. 63, no. 12, pp.
+  1001--1016, 2015.
+
+\bibitem{Pfeifle2017}
+F.~Pfeifle,
+\newblock ``Real-time physical model of a wurlitzer and a rhodes electric
+  piano,''
+\newblock {\em Proceedings of the 20th International Conference on Digital
+  Audio Effects (DAFx)}, 2017.
+
+\bibitem{Bybee2019}
+J.~Bybee,
+\newblock ``{COSM REVISITED},''
+\newblock Available at
+  \href{https://www.boss.info/us/community/boss_users_group/1319/}{https://www.boss.info/us/community/\allowbreak
+  boss\_users\_group/1319/}, Accessed July 01, 2019.
+
+\bibitem{NESS2016}
+The~University of~Edinburgh,
+\newblock ``{NESS -- Next Generation Sound Synthesis},''
+\newblock Available at
+  \href{http://www.ness.music.ed.ac.uk/}{http://www.ness.music.ed.ac.uk/},
+  Accessed July 01, 2019.
+
+\bibitem{Webb2015}
+C.J. Webb and S.~Bilbao,
+\newblock ``On the limits of real-time physical modelling synthesis with a
+  modular environment,''
+\newblock {\em Proceedings of the 18th International Conference on Digital
+  Audio Effects (DAFx)}, 2015.
+
+\bibitem{Borin1989}
+G.~Borin, G.~De~Poli, and A.~Sarti,
+\newblock ``A modular approach to excitator-resonator interaction in physical
+  models syntheses,''
+\newblock {\em Proceedings of the International Computer Music Conference},
+  1989.
+
+\bibitem{Michon2016}
+R.~Michon, J.O. Smith, M.~Wright, and C.~Chafe,
+\newblock ``{Augmenting the iPad: the BladeAxe},''
+\newblock {\em {Proceedings of the International Conference on New Interfaces
+  for Musical Expression (NIME)}}, 2016.
+
+\bibitem{Mehes2017}
+S.~Mehes, M.~van Walstijn, and P.~Stapleton,
+\newblock ``Virtual-acoustic instrument design: exploring the parameter space
+  of a string-plate model,''
+\newblock {\em {Proceedings of the International Conference on New Interfaces
+  for Musical Expression (NIME)}}, 2017.
+
+\bibitem{Walstijn2017}
+M.~van Walstijn and S.~Mehes,
+\newblock ``An explorative string-bridge-plate model with tunable parameters,''
+\newblock {\em {Proceedings of the 20th International Conference on Digital
+  Audio Effects (DAFx)}}, 2017.
+
+\bibitem{Rector2014}
+D.~Rector and S.~Topel,
+\newblock ``An electromagnetically actuated drum,''
+\newblock {\em {Proceedings of the International Conference on New Interfaces
+  for Musical Expression (NIME)}}, 2014.
+
+\bibitem{Piepenbrink2015}
+A.~Piepenbrink and M.~Wright,
+\newblock ``The bistable resonator cymbal: an actuated acoustic instrument
+  displaying physical audio effects,''
+\newblock {\em {Proceedings of the International Conference on New Interfaces
+  for Musical Expression (NIME)}}, 2015.
+
+\bibitem{littleBits2019}
+{littleBits Electronics Inc.},
+\newblock ``{SynthKit -- littleBits},''
+\newblock Available at
+  \href{https://shop.littlebits.com/products/synth-kit}{https://shop.littlebits.com/\allowbreak
+  products/synth-kit}, Accessed July 01, 2019.
+
+\bibitem{MuX2019}
+Decochon,
+\newblock ``{MuX--Build Sound},''
+\newblock Available at
+  \href{https://www.playmux.com/}{https://www.playmux.com/}, Accessed July 01,
+  2019.
+
+\bibitem{Gelineck2005}
+S.~Gelineck, N.~B\"ottcher, L.~Martinussen, and S.~Serafin,
+\newblock ``Virtual reality instruments capable of changing dimensions in
+  real-time,''
+\newblock {\em {2nd International Conference on Enactive Interfaces
+  (ENACTIVE05)}}, 2005.
+
+\bibitem{Willemsen2017}
+S.~Willemsen, S.~Serafin, and J.R. Jensen,
+\newblock ``Virtual analog simulation and extensions of plate reverberation,''
+\newblock {\em {Proceedings of the 14th Sound and Music Computing Conference
+  (SMC)}}, 2017.
+
+\end{thebibliography}
