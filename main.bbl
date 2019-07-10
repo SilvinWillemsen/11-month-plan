@@ -210,6 +210,12 @@ S.~Gelineck, N.~B\"ottcher, L.~Martinussen, and S.~Serafin,
 \newblock {\em {2nd International Conference on Enactive Interfaces
   (ENACTIVE05)}}, 2005.
 
+\bibitem{Walstijn2017}
+M.~van Walstijn and S.~Mehes,
+\newblock ``An explorative string-bridge-plate model with tunable parameters,''
+\newblock {\em {Proceedings of the 20th International Conference on Digital
+  Audio Effects (DAFx)}}, 2017.
+
 \bibitem{Willemsen2017}
 S.~Willemsen, S.~Serafin, and J.R. Jensen,
 \newblock ``Virtual analog simulation and extensions of plate reverberation,''
@@ -234,6 +240,12 @@ G.~Borin, G.~De~Poli, and A.~Sarti,
 S.~Meyers,
 \newblock {\em Effective C++},
 \newblock Addison-Wesley, third edition, 2005.
+
+\bibitem{JUCE}
+{JUCE ROLI},
+\newblock ``{JUCE},''
+\newblock Available at \href{https://juce.com/}{https://juce\allowbreak
+  .com/\allowbreak}, accessed April 04, 2019.
 
 \bibitem{Willemsen2019a}
 S.~Willemsen, N.~Andersson, S.~Serafin, and S.~Bilbao,

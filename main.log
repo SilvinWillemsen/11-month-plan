@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.3)  10 JUL 2019 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.3)  10 JUL 2019 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1572,94 +1572,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--37
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--94
+Underfull \hbox (badness 10000) in paragraph at lines 82--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--101
+Underfull \hbox (badness 10000) in paragraph at lines 88--94
 
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 128.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 120.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 122.
 
-Overfull \hbox (2.2396pt too wide) in paragraph at lines 157--157
+Overfull \hbox (2.2396pt too wide) in paragraph at lines 149--149
  []|\T1/ptm/m/n/10 MS1| 
  []
 
 
-Overfull \hbox (2.2396pt too wide) in paragraph at lines 157--157
+Overfull \hbox (2.2396pt too wide) in paragraph at lines 149--149
  []|\T1/ptm/m/n/10 MS2| 
  []
 
 
-Overfull \hbox (2.2396pt too wide) in paragraph at lines 157--157
+Overfull \hbox (2.2396pt too wide) in paragraph at lines 149--149
 []|\T1/ptm/m/n/10 MS3| 
  []
 
 
-Overfull \hbox (2.2396pt too wide) in paragraph at lines 157--157
+Overfull \hbox (2.2396pt too wide) in paragraph at lines 149--149
  []|\T1/ptm/m/n/10 MS4| 
  []
 
 
-Overfull \hbox (19.87318pt too wide) in paragraph at lines 128--178
+Overfull \hbox (19.87318pt too wide) in paragraph at lines 120--170
 []
  []
 
 
-Overfull \hbox (1.88786pt too wide) in paragraph at lines 128--178
+Overfull \hbox (1.88786pt too wide) in paragraph at lines 120--170
 \T1/ptm/m/n/12 MS1 (Nov): Im-ple-ment FDS Non-linear Bowed-String model (prov-ing un-der-stand-ing of FDSs). 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 201--206
+Underfull \hbox (badness 10000) in paragraph at lines 193--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--212
+Underfull \hbox (badness 10000) in paragraph at lines 199--204
 
  []
 
 
-Overfull \hbox (6.7181pt too wide) in paragraph at lines 218--218
+Overfull \hbox (6.7181pt too wide) in paragraph at lines 210--210
 |[]\T1/ptm/b/n/14.4 Plan for PhD Courses (both gen-eral and project re-lated courses)| 
  []
 
 
-Overfull \hbox (7.32448pt too wide) in paragraph at lines 220--240
+Overfull \hbox (7.32448pt too wide) in paragraph at lines 212--232
 [] 
  []
 
 [7] [8]
-Overfull \hbox (3.38307pt too wide) in paragraph at lines 260--261
+Overfull \hbox (3.38307pt too wide) in paragraph at lines 252--253
 []\T1/ptm/m/n/12 Next to this, I will col-lab-o-rate with Karolina Prawda, a PhD stu-dent part of Vesa V[]'alim[]'aki's
  []
 
@@ -1673,9 +1668,9 @@ Underfull \hbox (badness 3471) in paragraph at lines 173--178
 []\T1/ptm/m/n/10 The Uni-ver-sity of Ed-in-burgh,  ``NESS -- Next Gen-er-a-tion Sound Syn-the-sis,''  Avail-able at
  []
 
-)) 
+[10])) 
 AED: lastpage setting LastPage
-[10]
+[11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 24.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 24.
  (/Users/SilvinW/repositories/11-month-plan/main.aux)
@@ -1685,18 +1680,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C393A752DA91D1CA3ED83193BCE7C426;1228.
  ) 
 Here is how much of TeX's memory you used:
- 31187 strings out of 493014
- 579414 string characters out of 6133351
- 964714 words of memory out of 5000000
- 34144 multiletter control sequences out of 15000+600000
+ 31192 strings out of 493014
+ 579467 string characters out of 6133351
+ 963714 words of memory out of 5000000
+ 34146 multiletter control sequences out of 15000+600000
  41753 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,9n,74p,10470b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,9n,74p,10470b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/SilvinW/repositories/11-month-plan/main.pdf (10 pages, 88436 bytes).
+Output written on /Users/SilvinW/repositories/11-month-plan/main.pdf (11 pages, 89213 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

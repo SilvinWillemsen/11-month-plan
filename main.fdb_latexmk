@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex main"] 1562749287 "main.aux" "main.bbl" "main" 1562751958
+["bibtex main"] 1562763914 "main.aux" "main.bbl" "main" 1562766251
   "./setup/IEEEbib.bst" 1561987429 17903 9ff833f4bf67f47893e44ee17b52d211 ""
-  "main.aux" 1562751390 5032 27b483d528f59ce89830fd5dcf085efc ""
+  "main.aux" 1562763916 5107 192af66872a55114e009707d00657569 ""
   "main.bcf" 0 -1 0 ""
-  "setup/library.bib" 1562748056 13430 6fbb4f74da30e405c8ef6dffad6f0a0c ""
+  "setup/library.bib" 1562766251 13622 fac06809ac35252c5d41716a46549483 ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1562751388 "/Users/SilvinW/repositories/11-month-plan/main.tex" "/Users/SilvinW/repositories/11-month-plan/main.pdf" "main" 1562751958
-  "/Users/SilvinW/repositories/11-month-plan/main.aux" 1562751390 5032 27b483d528f59ce89830fd5dcf085efc ""
+  "main.bbl"
+["pdflatex"] 1562763914 "/Users/SilvinW/repositories/11-month-plan/main.tex" "/Users/SilvinW/repositories/11-month-plan/main.pdf" "main" 1562766251
+  "/Users/SilvinW/repositories/11-month-plan/main.aux" 1562763916 5107 192af66872a55114e009707d00657569 ""
   "/Users/SilvinW/repositories/11-month-plan/main.tex" 1562748056 667 c8b8641a2a2d124c16b0e2d2575948de ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -213,18 +213,18 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1478168725 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1478168753 3873397 d7097b3ecb6d977e7d73acf1f03b0bec ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "11MonthPlan.tex" 1562751957 27425 46e5ee052d257f936f706541dc608954 ""
-  "main.aux" 1562751390 5032 27b483d528f59ce89830fd5dcf085efc ""
-  "main.bbl" 1562749287 8865 e511c56d79217aa3976ac5b1be87e233 "bibtex main"
-  "main.out" 1562751390 1228 c393a752da91d1ca3ed83193bce7c426 ""
+  "11MonthPlan.tex" 1562763911 27319 98201ca0f32e277976355920173cb0f6 ""
+  "main.aux" 1562763916 5107 192af66872a55114e009707d00657569 ""
+  "main.bbl" 1562763914 9276 0578f77957c8b46a553d43d2d6f6fb7a "bibtex main"
+  "main.out" 1562763916 1228 c393a752da91d1ca3ed83193bce7c426 ""
   "main.tex" 1562748056 667 c8b8641a2a2d124c16b0e2d2575948de ""
   "setup/_preamble_.tex" 1562749067 3036 57d032f3896058e561cb79add7e5a17a ""
   "setup/mcode.sty" 1561987429 10448 2ae78eea8d4f025b14d0ebee54bf94dc ""
   "setup/references.tex" 1562748056 148 616328d622a0f29f2a3f7accb7e5111a ""
   (generated)
-  "/Users/SilvinW/repositories/11-month-plan/main.log"
-  "/Users/SilvinW/repositories/11-month-plan/main.pdf"
-  "main.aux"
   "main.log"
   "main.out"
   "main.pdf"
+  "main.aux"
+  "/Users/SilvinW/repositories/11-month-plan/main.pdf"
+  "/Users/SilvinW/repositories/11-month-plan/main.log"
