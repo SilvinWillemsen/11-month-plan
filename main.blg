@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: setup/IEEEbib.bst
 Database file #1: setup/library.bib
-You've used 27 entries,
+You've used 39 entries,
             1838 wiz_defined-function locations,
-            605 strings with 8144 characters,
-and the built_in function-call counts, 4405 in all, are:
-= -- 385
-> -- 215
-< -- 2
-+ -- 84
-- -- 57
-* -- 262
-:= -- 786
-add.period$ -- 28
-call.type$ -- 27
-change.case$ -- 25
+            693 strings with 10254 characters,
+and the built_in function-call counts, 7132 in all, are:
+= -- 665
+> -- 299
+< -- 4
++ -- 118
+- -- 79
+* -- 481
+:= -- 1206
+add.period$ -- 40
+call.type$ -- 39
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 208
-empty$ -- 411
-format.name$ -- 57
-if$ -- 971
+cite$ -- 39
+duplicate$ -- 317
+empty$ -- 675
+format.name$ -- 79
+if$ -- 1579
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 24
-newline$ -- 138
-num.names$ -- 27
-pop$ -- 59
+int.to.str$ -- 39
+missing$ -- 34
+newline$ -- 198
+num.names$ -- 39
+pop$ -- 82
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 97
+skip$ -- 140
 stack$ -- 0
-substring$ -- 103
-swap$ -- 41
-text.length$ -- 2
+substring$ -- 349
+swap$ -- 69
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 35
-width$ -- 29
-write$ -- 277
+while$ -- 69
+width$ -- 41
+write$ -- 410

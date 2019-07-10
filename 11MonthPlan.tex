@@ -2,34 +2,32 @@
 
 In the past few decades, much research has been done on digital sound synthesis. Using a physical model (PM) of a musical instrument, rather than for example using sampling synthesis for creating sound, makes the playability of the digital instrument very flexible. In other words, the now-virtual instrument can easily adapt to changes in performance and playing style. Many PMs already exist and can output high quality sound which is sometimes indistinguishable from the real instrument.
 
-“Why not just use the real instrument?” you might ask. Physical modelling makes it possible to extend traditional instruments in ways that would be impossible in the real world. Changing the shape, size or material of the instrument over time potentially results in interesting sounds and could even extend the possibilities for expression for the musician. Furthermore, old or rare instruments that can not be played anymore -- as they might be damaged or because they are museum pieces -- can be resurrected virtually.
+“Why not just use the real instrument?” you might ask. Physical modelling makes it possible to extend traditional instruments in ways that would be impossible in  the real world. Changing the shape, size or material of the instrument over time potentially results in interesting sounds and could even extend the possibilities for expression for the musician. Furthermore, old or rare instruments that can not be played anymore -- as they are for example damaged or valuable museum pieces -- can be resurrected virtually.
 
-Going a step further, different components of different instruments can be linked together to create hybrid instruments. Most instruments can be divided into an exciter and a resonator component. Virtually connecting, for example, the mouthpiece of a trumpet to the string of a guitar could potentially lead to interesting sounds.
+Going a step further, different components of different instruments can be linked together to create hybrid instruments. Most instruments can be divided into an exciter and a resonator component. Virtually connecting, for example, the mouthpiece of a trumpet to a guitar string could potentially lead to interesting sounds.
 
-There are various techniques to implement physical models, where there is a tradeoff between accuracy and speed making high-quality physical modelling very computationally expensive. Only recently have we been able to run existing highly accurate PMs in real-time, making them playable for performers and musicians. The PhD project will focus on implementing existing PMs using techniques focusing on accuracy in real-time.
+There are various techniques to implement physical models where a tradeoff between accuracy and speed exists, and makes high-quality physical modelling very computationally expensive. Only recently have we been able to run existing highly accurate PMs in real-time, making them playable for performers and musicians. The PhD project will focus on implementing existing PMs using techniques focusing on accuracy in real-time. As the implemented models will be playable in real-time, I will investigate the use of different controllers, such as the Sensel Morph \cite{Sensel2019}. and the Haply \cite{Haply2019}.
 
-As the implemented models will be playable in real-time, I will investigate the use of different controllers, such as the Sensel Morph \cite{Sensel2019}. and the Haply \cite{Haply2019}.
-
-The goal of this project will be to push the state of the art in real-time accurate physical models and explore the possibilities that come with this, such as changing physically fixed parameters in real-time and combining components of different instruments to allow for novel interactions and create sounds never heard before. To showcase the project, an application will be made where the user can build their own virtual instrument using the physical models created during the course of the PhD. 
+The goal of this project will be to push the state of the art in real-time accurate PMs and explore the possibilities that come with this, such as changing physically fixed parameters in real-time and combining components of different instruments to allow for novel interactions and create sounds never heard before. To showcase the project, an application will be made where the user can build their own real-time virtual instrument using the physical models created during the course of the PhD. 
 
 \section{The scientific content of the PhD project}
 
 \subsection{Background}
-Physical modelling, along with sampling synthesis (also known as wavetable synthesis \cite{Smith2010a}) and spectral modelling, is a technique to synthesise sound. According to many, physical modelling is the best technique to realistically and naturally simulate real-world musical instruments \cite{Valimaki2006, Smith2010b, Bilbao2009}. As this technique simulates the instrument based on its physics rather than using pre-recorded samples, it is more flexible to player-interaction and thus more realistic when synthesising sound in performance. Although physical models (PMs) could potentially sound indistinguishable from the instrument that they are simulating, it has been impossible - until recently - to make high-quality — which I define as non-linear and based on finite-difference schemes (FDSs) — PMs ‘playable’ in real time \cite{Smith2010a}. With the computational power we currently possess, we can run the PMs in real-time and make them available for musicians in latency-less applications. These applications include digital instrument plugins that can be used by music producers, but also resurrect old or rare instruments that can not be played anymore due to damage, or are too valueable. 
+Physical modelling, along with sampling synthesis (also known as wavetable synthesis \cite{Smith2010a}) and spectral modelling, is a technique to synthesise sound. According to many, physical modelling is the best technique to realistically and naturally simulate real-world musical instruments \cite{Valimaki2006, Smith2010b, Bilbao2009}. As this technique simulates the instrument based on its physics rather than using pre-recorded samples, it is more flexible to player-interaction and thus more realistic when synthesising sound in performance. Although physical models (PMs) could potentially sound indistinguishable from the instrument that they are simulating, it has been impossible - until recently - to make high-quality — which I define as non-linear and based on finite-difference schemes (FDSs) — PMs ‘playable’ in real-time \cite{Smith2010a}. With the computational power we currently possess, we can run the PMs in real-time and make them available for musicians in latency-less applications. These applications include digital instrument plugins that can be used by music producers, but also resurrect old or rare instruments that can not be played anymore due to damage, or are too valueable. 
 
 Even though there are already existing real-time PMs (see Section \ref{SOTA}), to my opinion, they do not make use of the full potential of using physical modelling for sound synthesis. PMs make it possible for parameters like shape, size, material properties, etc. to be changed, which is physically impossible or very hard to do. Furthermore, different instrument components can be combined to create hybrid instruments which can result in unique sounds that can only be created using PMs.
 
 \subsection{State-of-the-art}\label{SOTA}
-This section will give a brief introduction on the state of the art on physical models, real-time implementation of these, modular environments for sound synthesis and instrument extension.
+This section will give a brief introduction on the state of the art on physical modelling techniques, real-time implementation of these, modular environments for sound synthesis and instrument extension.
 
 \subsubsection*{Physical Modelling}
 The physics of musical instruments can be well described by partial differential equations (PDEs) (see \cite{Bilbao2009} among many others). Many of these equations and other knowledge currently available on the physics of musical instruments have been collected by N. H. Fletcher and T. D. Rossing in \cite{Fletcher1998}. In the past decades, much research has been done on implementing these PDEs to model and simulate different musical instruments. Great overviews of implementation techniques are given by, for example, Vesa Välimäki et al. in \cite{Valimaki2006} and Julius O. Smith in \cite{Smith2010a, Smith2010b}. Some techniques that are described in this literature can be found below:
 \\
 \\
-\emph{Modal Synthesis} decomposes a system into a series of uncoupled ‘modes of vibration’. First used in a musical context by Morrison and Adrien in \cite{Morrison1993} it is a technique that is still used today due to its computational efficiency when simulating higher dimensional systems such as plates (2D) or rooms (3D). It is especially effective when used to describe a linear system \cite{Bilbao2018} with a small number of long-resonating modes \cite{Smith2010a}. When used to describe non-linear systems, however, the modes become `coupled’ and the system will quickly become more computationally expensive. 
+\emph{Modal Synthesis} decomposes a system into a series of uncoupled ‘modes of vibration’. First used in a musical context by Morrison and Adrien in \cite{Morrison1993}, it is a technique that is still used today due to its computational efficiency especially when simulating higher dimensional systems such as plates (2D) or rooms (3D) \SWcomment[correct right?]. It is especially effective when used to describe a linear system \cite{Bilbao2018} with a small number of long-resonating modes \cite{Smith2010a}. When used to describe non-linear systems, however, the modes become `coupled’ and the system will quickly become more computationally expensive. 
 \\
 \\
-\emph{Finite-Difference Time Domain} methods (FDTDs) (or Finite-Difference Schemes (FDS)) aim to solve PDEs by approximating them with difference equations, discretising a continuous system into grid-points in space and time. In a musical context, this technique was first used for the case in string vibration in \cite{Ruiz1969, Hiller1971I, Hiller1971II} and later in \cite{Chaigne1992, Chaigne1994}. Stefan Bilbao extensively describes this method in \cite{Bilbao2009, Bilbao2018}. Although very computationally expensive, this technique can most accurately resemble any system, whether it is linear or non-linear, time-invariant or time-variant.
+\emph{Finite-Difference Time Domain} methods (FDTDs) (or Finite-Difference Schemes (FDSs)) aim to solve PDEs by approximating them with difference equations, discretising a continuous system into grid-points in space and time. In a musical context, this technique was first used for the case in string vibration in \cite{Ruiz1969, Hiller1971I, Hiller1971II} and later in \cite{Chaigne1992, Chaigne1994}. Stefan Bilbao extensively describes this method in \cite{Bilbao2009, Bilbao2018}. Although very computationally expensive, this technique can most accurately resemble any system, whether it is linear or non-linear, time-invariant or time-variant.
 \\
 \\
 \emph{Digital Waveguide Modelling} (or Digital Waveguides (DWG)) is a modelling technique that discretises wave propagation and scattering. The technique was first presented in \cite{Smith1992}, and is mostly used for one-dimensional systems, such as strings and acoustic tubes and decomposes their system into travelling wave components. This technique has also been used in higher-dimensional systems, but is superior in efficiency when used in the one-dimensional case \cite{Valimaki2006}. Some authors have combined DWGs with FDS (such as in \cite{Erkut2002, Maestre2014}) to accurately model non-linear behaviour while maintaining high-speed implementation.
@@ -38,16 +36,16 @@ The physics of musical instruments can be well described by partial differential
 \textit{Mass-spring networks} can be similar in nature to FDTD methods, but treat each grid point as an individual mass connected to other masses through springs in a network. Pioneered in a musical context by Cadoz in \cite{Cadoz1979, Cadoz1983, Cadoz1993} it is currently being further developed by mi-creative in a real-time, interactive environment \cite{Villeneuve2019, Leonard2019}. 
 
 \subsubsection*{Real-time implementation}
-Even though physical modelling has been a popular research field in the past few decades, relatively little research has been done on making the models work in real-time, i.e. `playable’ \cite{Mehes2016}. Several virtual string instruments and different electric pianos have been made real-time by F. Pfeifle and R. Bader \cite{Pfeifle2012, Pfeifle2015, Pfeifle2017}. They used field programmable gate arrays (FPGAs) for implementing models based on FDSs. Furthermore, Roland’s V-series use COSM (Composite Object Sound Modelling) technology \cite{Bybee2019} that implement real-time physical models in hardware instruments.
+Even though physical modelling has been a popular research field in the past few decades, relatively little research has been done on making the models work in real-time, i.e. `playable’ \cite{Mehes2016}. Several virtual string instruments and different electric pianos have been made real-time by Pfeifle and Bader in \cite{Pfeifle2012, Pfeifle2015, Pfeifle2017}. They used field programmable gate arrays (FPGAs) for implementing models based on FDSs. Furthermore, Roland’s V-series use COSM (Composite Object Sound Modelling) technology \cite{Bybee2019} that implement real-time physical models in hardware instruments. In the NESS project \cite{NESS2016}, Stefan Bilbao and his team focused on implementing systems using FDTD methods in real-time, which is more relevant to this PhD project. More on this can be found below.
 
 \subsubsection*{Modular Environments for Sound Synthesis}
 
 As will be described in the next section, the goal of the project is to create a modular environment consisting of different virtual instrument components. An existing modular environment for sound synthesis is the Synth Kit by littleBits \cite{littleBits2019} where the different modules are oscillators, filters, sequencers, etc., essentially making it a modular synthesiser where the components can physically be moved around and connected. Another example is MuX by Decochon \cite{MuX2019}, a modular synthesiser that a user can build and control in virtual reality. Both of these examples present an alternative way to control a modular synthesiser and are not based on physical models.
 
-In the NESS project \cite{NESS2016}, Stefan Bilbao and his team focused on implementing systems using FDTD methods in real-time, which is more relevant to this PhD project. In \cite{Webb2015} they present a real-time physically modelled implementation of strings/bars and plates in a modular environment. Using C combined with AVX and multithreading they are able to make a system that can run a model of a plate with approximately 7000 grid points virtually connected to 10 strings run on a 4-core processor with a base clock rate of 3.1GHz. Their paper will be a good starting point for creating real-time models for musical instruments rather than ‘simple’ 1D and 2D models.
+As part of the NESS project mentioned above, Webb and Bilbao presented a real-time physically modelled implementation of strings/bars and plates in a modular environment in \cite{Webb2015}. Using C combined with AVX and multithreading they are able to make a system that can run a model of a plate with approximately 7000 grid points virtually connected to 10 strings run on a 4-core processor with a base clock rate of 3.1GHz. Their paper will be a good starting point for creating real-time models for musical instruments rather than ‘simple’ 1D and 2D models.
 
 \subsubsection*{Extending Physical Models: from physically static to virtually dynamic}
-There is a lot of potential when using physical modelling to make physically fixed parameters virtually dynamic, where I define ``dynamic" as changing in real-time. The main reasons to do this are 1) to create sonically interesting results and 2) to extend the possibilities and (potentially) enhancing expressivity for the musician.
+There is a lot of potential when using physical modelling to make physically fixed parameters virtually dynamic, where I define ``dynamic'' as changing in real-time. The main reasons to do this are 1) to create sonically interesting results and 2) to extend the possibilities and (potentially) enhancing expressivity for the musician.
 An example of existing dynamic physical models is Michon’s BladeAxe \cite{Michon2016}, which allows the user to alter the string length in real-time with the only control being the speed of an LFO. In \cite{Gelineck2005}, the authors present a flute of which the length can be changed in real-time using a foot-pedal. In \cite{Willemsen2017}, I presented extensions to a plate reverb where the length and width of the plate and the microphone positions could be altered in real-time. In the PhD project extensions like these will be further explored.
 
 \subsection{Project objectives}
@@ -74,7 +72,7 @@ Both perspectives are individually addressed below:
 \noindent Instruments can generally be divided in an exciter and a resonator component \cite{Borin1989}. Examples of exciters are the bow of a violin or the player's lips for a trumpet. Resonators would in this case be the string and body of the violin, or the trumpet itself (the hollow tube). All of this can be modelled and combined to create hybrid instruments. Using the previous examples, we can now make a bowed trumped, or a lip-excited string.
 \\
 
-\noindent The ``physical impossibilities" presented in this section could potentially create sounds never heard before and are therefore interesting to explore during the course of the PhD project. 
+\noindent The ``physical impossibilities'' presented in this section could potentially create sounds never heard before and are therefore interesting to explore during the course of the PhD project. 
 
 \subsubsection*{How can the now-virtual instruments be controlled in a natural way?}
 A challenge in playing virtual instruments is their control. As with many physical instruments, you interact immediately with the sound-creating object rather than using a keyboard and mouse. Until now, experiments have been done with the Sensel Morph, which is a controller containing ca. 20,000 pressure sensors that allow for highly expressive control of the instruments \cite{Sensel2019}.
@@ -133,26 +131,24 @@ Furthermore, the application will be playable by means of the different controll
      \hline
      \centering\bf Quarter & \centering\bf 3 & \centering\bf 4 & \centering\bf 1 & \centering\bf 2 & \centering\bf 3 & \centering\bf 4 & \centering\bf 1 & \centering\bf 2 & \centering\bf 3 & \centering\bf 4 & \centering\bf 1 & \multicolumn{1}{c|}{\bf 2}  \\
      \hline
-     Literature study & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & & & & & & & &  \cellcolor{lighterblue}\\
+     Literature study & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{lighterred} & \cellcolor{lighterred}& \cellcolor{lighterred}& & & &  \cellcolor{lighterblue}\\
      \hline
-     Implementing existing & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & & & & & & & &  \cellcolor{lighterblue}\\
-    physical models & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & & & & & & & &  \cellcolor{lighterblue}\\
+     Implementing existing & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{lighterred} & \cellcolor{lighterred}& \cellcolor{lighterred}&\cellcolor{lighterred}& & &  \cellcolor{lighterblue}\\
+    physical models & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{lighterred} & \cellcolor{lighterred}&\cellcolor{lighterred} &\cellcolor{lighterred} & & &  \cellcolor{lighterblue}\\
      \hline
-     Real-time implementation & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & & & & & & & &  \cellcolor{lighterblue}\\
+     Real-time implementation & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{lighterred} & \cellcolor{lighterred}& \cellcolor{lighterred}& \cellcolor{lighterred}& & &  \cellcolor{lighterblue}\\
      \hline
     Build modular PM & & & & & & & \cellcolor{lighterred} & \cellcolor{lighterred} & \cellcolor{lighterred} &\cellcolor{lighterred} &\cellcolor{lighterred} &  \cellcolor{lighterblue}\\
     framework  & & & & & & & \cellcolor{lighterred} & \cellcolor{lighterred} & \cellcolor{lighterred} &\cellcolor{lighterred} &\cellcolor{lighterred} &  \cellcolor{lighterblue}\\
-     \hline
-     & & & & & & & & & & & & \cellcolor{lighterblue} \\
      \hline 
      Writing thesis & & & & & & & & &\cellcolor{lighterred} &\cellcolor{lighterred} & \cellcolor{lighterred} &\cellcolor{lighterblue}
      \\
      \hline PhD Courses & \cellcolor{green} & \cellcolor{green} & &  \cellcolor{green} & \cellcolor{lighterred} & \cellcolor{lighterred}& & & & & & \cellcolor{lighterblue}
      \\
      \hline 
-      Writing conference /  & & \cellcolor{green} &\cellcolor{green}  & \cellcolor{green} & \cellcolor{yellow} & & & & & & &
+      Writing conference /  & & \cellcolor{green} &\cellcolor{green}  & \cellcolor{green} & \cellcolor{lighterred} & & & & & & &
       \cellcolor{lighterblue}\\
-     journal paper & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} &\cellcolor{yellow} & & & & & & &
+     journal paper & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} &\cellcolor{lighterred} & & & & & & &
       \cellcolor{lighterblue}\\
      \hline 
      Publishing papers & & & \cellcolor{green}\centering C1 & \cellcolor{green}\centering C2 & & \cellcolor{lighterred} \centering J1 &\cellcolor{lighterred}\centering C4& & & & \cellcolor{lighterred} \centering J2 &  \cellcolor{lighterblue}
@@ -184,22 +180,22 @@ MS5 (March): Finished modular application: many modules, FDS solver, energy / st
 The thesis will be written as a collection of the papers published throughout the course of the project. This will be accompanied by an extended summary that will introduce the real-time modular application and each module individually. Lastly, several tutorials on, for example, energy and stability analysis will be given and included to the thesis as appendices. 
 
 \subsection{Tentative publication list}
-C1 \cite{Willemsen2019a}: S. Willemsen, N. Andersson, S. Serafin and S. Bilbao, ``Real-time control of large scale physical models using the Sensel Morph," \textit{Proceedings of the 16th Sound and Music Computing Conference (SMC)}, pp. 275-280, 2019.
+C1 \cite{Willemsen2019a}: S. Willemsen, N. Andersson, S. Serafin and S. Bilbao, ``Real-time control of large scale physical models using the Sensel Morph,'' \textit{Proceedings of the 16th Sound and Music Computing Conference (SMC)}, pp. 275-280, 2019.
 \vspace{0.15cm}
 \\
-C2 \cite{Willemsen2019b}: S. Willemsen, S. Bilbao and S. Serafin, ``Real-time implementation of an elasto-plastic friction model applied to stiff strings using finite difference schemes," \textit{Proceedings of the 22nd International Conference on Digital Audio Effects (DAFx)}, 2019.
+C2 \cite{Willemsen2019b}: S. Willemsen, S. Bilbao and S. Serafin, ``Real-time implementation of an elasto-plastic friction model applied to stiff strings using finite difference schemes,'' \textit{Proceedings of the 22nd International Conference on Digital Audio Effects (DAFx)}, 2019.
 \vspace{0.15cm}
 \\
-C3. S. Willemsen, S. Bilbao and S. Serafin, ``Necessary and sufficient conditions for the elasto-plastic friction model," \textit{SOMEWHERE}, 2019.
+C3. S. Willemsen, S. Bilbao and S. Serafin, ``Necessary and sufficient conditions for the elasto-plastic friction model,'' \textit{SOMEWHERE}, 2019.
 \vspace{0.15cm}
 \\
-C4. S. Willemsen, S. Bilbao and S. Serafin, ``Introducing two hybrid virtual instruments: the bowed trumpet, and the lip-excited string," \textit{Proceedings of the 17th Sound and Music Computing Conference (SMC)}, 2020.
+C4. S. Willemsen, S. Bilbao and S. Serafin, ``Introducing two hybrid virtual instruments: the bowed trumpet, and the lip-excited string,'' \textit{Proceedings of the 17th Sound and Music Computing Conference (SMC)}, 2020.
 \vspace{0.15cm}
 \\
-J1: S. Willemsen, M. Ducceschi, S. Bilbao and S. Serafin, ``Modelling the Tromba Marina: non-linearities using non-iterative methods,"\textit{Journal for New Music Research}, 2020.
+J1: S. Willemsen, M. Ducceschi, S. Bilbao and S. Serafin, ``Modelling the Tromba Marina: non-linearities using non-iterative methods,''\textit{Journal for New Music Research}, 2020.
 \vspace{0.15cm}
 \\
-J2: S. Willemsen, S. Bilbao and S. Serafin, ``The modular physical modelling instrument using finite difference schemes in real-time," \textit{Computer Music Journal}, 2021.
+J2: S. Willemsen, S. Bilbao and S. Serafin, ``The modular physical modelling instrument using finite difference schemes in real-time,'' \textit{Computer Music Journal}, 2021.
 
 \section{Supervisor/student co-operation agreements}
 \textit{Time management}
@@ -261,7 +257,7 @@ Immaterial rights to patents will follow the standard university rules.
 \section{External co-operation}
 From the start of the PhD project,  I have collaborated to a great extent with Stefan Bilbao and his team at the University of Edinburgh. I travelled to Edinburgh for two weeks to learn different analysis techniques related to FDSs and plan to do this again during the course of the PhD. Moreover, both past and future papers have/will be in collaboration with him and his team.
 
-Next to this, I will collaborate with Karolina Prawda, a PhD student part of Vesa V\"alim\"aki's team at Aalto University Finland, through the NordicSMC project.
+Next to this, I will collaborate with Karolina Prawda, a PhD student part of Vesa V\''alim\''aki's team at Aalto University Finland, through the NordicSMC project.
 
 \section{Financing budget}
 The PhD project is funded through a PhD Stipend at the Department of Architecture, Design Media Technology (no. 7-18017).
