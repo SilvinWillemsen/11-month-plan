@@ -45,37 +45,30 @@ As will be described in the next section, the goal of the project is to create a
 As part of the NESS project mentioned above, Webb and Bilbao presented a real-time physically modelled implementation of strings/bars and plates in a modular environment in \cite{Webb2015}. Using C combined with AVX and multithreading they are able to make a system that can run a model of a plate with approximately 7000 grid points virtually connected to 10 strings run on a 4-core processor with a base clock rate of 3.1GHz. Their paper will be a good starting point for creating real-time models for musical instruments rather than ‘simple’ 1D and 2D models.
 
 \subsubsection*{Extending Physical Models: from physically static to virtually dynamic}
-There is a lot of potential when using physical modelling to make physically fixed parameters virtually dynamic, where I define ``dynamic'' as changing in real-time. The main reasons to do this are 1) to create sonically interesting results and 2) to extend the possibilities and (potentially) enhancing expressivity for the musician.
-An example of existing dynamic physical models is Michon’s BladeAxe \cite{Michon2016}, which allows the user to alter the string length in real-time with the only control being the speed of an LFO. In \cite{Gelineck2005}, the authors present a flute of which the length can be changed in real-time using a foot-pedal. In \cite{Willemsen2017}, I presented extensions to a plate reverb where the length and width of the plate and the microphone positions could be altered in real-time. In the PhD project extensions like these will be further explored.
+There is a lot of potential when using physical modelling to make physically fixed parameters virtually dynamic, i.e., variable in real-time. The main reasons to do this are 1) to create sonically interesting results and 2) to extend the possibilities and (potentially) enhancing expressivity for the musician.
+An example of existing dynamic physical models is Michon’s BladeAxe \cite{Michon2016}, which allows the user to alter the string length in real-time with the only control being the speed of an LFO. In \cite{Gelineck2005}, the authors present a flute of which the length can be changed in real-time using a foot-pedal. In \cite{Walstijn2017}, the authors present a string-bridge-plate model based on modal synthesis where many parameters can be changed in real-time. In \cite{Willemsen2017}, I presented extensions to a plate reverb where the length and width of the plate and the microphone positions could be altered in real-time. In the PhD project extensions like these will be further explored.
 
 \subsection{Project objectives}
-Application to allow for dynamic instrument creation (combining different exciters and resonators), parameter changes (needs to have stability and energy analysis) 
-
 This section will state multiple research questions and give some background on each:
-
 \subsubsection*{How can computationally expensive physical models be made playable in real-time?}
 A drawback of using physical modelling for sound synthesis is that there is a high computational cost involved causing most existing physical models to not run in real-time. In other words, these virtual instruments are not ‘playable’. One of the focuses of this PhD project will be to implement existing physical models and optimise them so that they work in real-time. 
-After having modelled the PMs as precise as possible, I will look at ways to simplify the models while keeping the sound relatively unchanged. Decomposing a PM into several components and taking one of these back into the real world (as mentioned above) will relieve the algorithm of many computations, which is another way to get closer to a real-time application.
 
 \subsubsection*{How can (the sound of) traditional instruments be extended upon?}
-At the moment, I believe this objective can be achieved using two different perspectives: 
+As mentioned before, PMs relieve some of the physical limitations that the real world imposes on real-life instruments. \SWcomment[$\Leftarrow$ different wording] I believe there are to ways to do this: 
 \begin{enumerate}
     \item by making physically fixed parameters of the now-virtual instrument component dynamic, and
     \item by combining components of different instruments.
 \end{enumerate}
-Both perspectives are individually addressed below:
+These ``physical impossibilities'' could potentially create sounds never heard before and are therefore interesting to explore during the course of the PhD project. Both are individually addressed below:
 \\
 
-\noindent Physical models can go beyond what traditional musical instruments can do. ‘Virtualising’ traditional musical instruments comes with an infinite amount of (physically impossible) possibilities — solid structures can be made flexible, material properties can be changed and limitations of the human body (such as lung capacity for wind instrumentalists, or amount/reach of fingers for guitar players and keyboardists) can be overcome. It would thus be interesting to investigate what parameters of the model could be made dynamic to create sonically interesting outcomes and/or allow musicians for a higher level of expressiveness.
+\noindent PMs can go beyond what traditional musical instruments can do. ‘Virtualising’ traditional musical instruments comes with an infinite amount of (physically impossible) possibilities -- solid structures can be made flexible, material properties can be changed. It would thus be interesting to investigate what parameters of the model could be made dynamic to create sonically interesting outcomes and/or allow musicians for a higher level of expressiveness.
 \\
 
-\noindent Instruments can generally be divided in an exciter and a resonator component \cite{Borin1989}. Examples of exciters are the bow of a violin or the player's lips for a trumpet. Resonators would in this case be the string and body of the violin, or the trumpet itself (the hollow tube). All of this can be modelled and combined to create hybrid instruments. Using the previous examples, we can now make a bowed trumped, or a lip-excited string.
-\\
-
-\noindent The ``physical impossibilities'' presented in this section could potentially create sounds never heard before and are therefore interesting to explore during the course of the PhD project. 
+\noindent Instruments can generally be divided in an exciter and a resonator component \cite{Borin1989}. Examples of exciters are the bow of a violin or the player's lips for a trumpet. Resonators would in this case be the string and body of the violin, or the trumpet itself (the hollow tube). All of this can be modelled and combined to create hybrid instruments. Using the previous examples, we can now make a bowed trumpet, or a lip-excited string.
 
 \subsubsection*{How can the now-virtual instruments be controlled in a natural way?}
-A challenge in playing virtual instruments is their control. As with many physical instruments, you interact immediately with the sound-creating object rather than using a keyboard and mouse. Until now, experiments have been done with the Sensel Morph, which is a controller containing ca. 20,000 pressure sensors that allow for highly expressive control of the instruments \cite{Sensel2019}.
+A challenge in playing virtual instruments is their control. As with many physical instruments, one interacts immediately with the sound-creating object, such as a string on a guitar or a membrane on a drum. This allows for a higher expressivity for the musician, rather than using a keyboard and mouse. Until now, experiments have been done with the Sensel Morph, which is a controller containing ca. 20,000 pressure sensors that allow for highly expressive control of the instruments \cite{Sensel2019}.
 
 Expressivity, however, is not the only thing that makes an instrument (interesting and enjoyable to play). The interaction could feel very `dry' as there is no haptic feedback; something which is the case in (nearly) all physical instruments. In virtual instruments, this `feel' could be taken back by a controller allowing for haptic feedback such as the Haply \cite{Haply2019} or using `haptuators' \cite{tactile2019}.
 
@@ -109,10 +102,9 @@ The possibilities of using GPU, CPU Parallelisation (Multi-threading) and Advanc
 
 When simulating a traditional musical instrument using PMs, it relieves all physical restrictions on the instrument. In terms of a PM, we can say that (almost) all parameters are free or can be made dynamic.
 
-The collection of parameters the PMs rely on will be investigated by listening to the sound output after a change in parameter value. I hypothesise that the most interesting parameters to change are the ones that directly influence musical qualities such as pitch or timbre. For example, the length of a string is directly correlated to pitch. The radius of a string is too, but a change in this will change the inharmonicity of the string and thus also the timbre.
+The collection of parameters the PMs rely on will be investigated by listening to the sound output after a change in their values. I hypothesise that the most interesting parameters to change are the ones that directly influence musical qualities such as pitch or timbre. For example, the length of a string is directly correlated to pitch. The radius of a string is too, but a change in this will change the inharmonicity of the string and thus also the timbre.
 
-A problem in changing parameter values
-Changes FDSs, stability, grid spacing, 
+A problem when using FDSs, is that the number of grid points depends on the parameters mentioned above. This will thus also dynamically change, possibly causing stability issues. Using energy and stability analysis techniques, I will investigate whether it will be possible to change these parameters without causing the system to become unstable.
 
 \subsection{Significance and outcome}
 
